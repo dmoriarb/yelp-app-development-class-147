@@ -6,6 +6,10 @@ class Customer < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :photos,
+             :through => :reviews,
+             :source => :review
+
   # Validations
 
   # Include default devise modules. Others available are:

@@ -5,6 +5,10 @@ class Photo < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :customer,
+             :through => :photos,
+             :source => :customer
+
   has_many   :restaurant,
              :through => :review,
              :source => :restaurant
