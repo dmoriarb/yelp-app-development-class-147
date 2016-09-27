@@ -12,6 +12,10 @@ class Restaurant < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :neighborhood,
+             :through => :restaurants,
+             :source => :city
+
   # Validations
 
   # Include default devise modules. Others available are:
