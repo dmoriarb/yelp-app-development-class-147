@@ -1,6 +1,8 @@
 class Restaurant < ApplicationRecord
   # Direct associations
 
+  belongs_to :city
+
   has_many   :reviews,
              :dependent => :destroy
 
